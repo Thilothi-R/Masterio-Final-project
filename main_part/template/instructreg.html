@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css2/log/style1.css' %}">
+  <link rel="shortcut icon" href="{% static 'images/logoo.jpg' %}" type="image/png">
+  <title>Masterio</title>
+</head>
+<body>
+  <section>
+    <div class="box">
+      <div class="form">
+        <center> <h1>Welcome !!</h1>   
+          <h2>Instructor Register</h2>
+      <form action="/instructoreg" method="POST">
+        {% csrf_token %}
+        <div class="inputBx">
+          <input type="text" name="Username" placeholder="Username" required>
+        </div><br>
+        <div class="inputBx">
+          <input type="text" name="First_name" placeholder="First_name" required>
+        </div><br>
+        <div class="inputBx">
+          <input type="text" name="Last_name" placeholder="Last_name" required>
+         
+
+        </div><br>
+        <div class="inputBx">
+          <input type="text"name="Mail_id" placeholder="Mail_id" required>
+          
+
+        </div><br>
+        <div class="inputBx">
+          <input type="password" name="password" placeholder="password" required>
+          
+
+        </div><br>
+        <label class="remeber">
+          <input type="checkbox">Remember Me
+        </label><br><br>
+       <div class="inputBx">
+          <p><button type="submit">Done</button> </p>  
+
+        </div>
+      </form><br><br>
+      
+      <p><a href="#">Any Help?</a></p>
+    </center> 
+    </div>
+
+    </div>
+  </section>
+</body>
+</html>
